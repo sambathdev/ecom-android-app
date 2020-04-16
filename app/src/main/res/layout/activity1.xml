@@ -13,17 +13,17 @@
         android:layout_width="match_parent"
         android:layout_height="456dp"
         android:gravity="center"
-        android:text="I am Activity1"
+        android:text="Blog List Activity"
 
 
-        ></TextView>
+        android:textSize="30sp"></TextView>
 
     <Button
         android:id="@+id/button3"
         android:layout_width="404dp"
         android:layout_height="49dp"
         android:onClick="onButtonClick2"
-        android:text="Click to AC2"
+        android:text="Click to Blog Detail Activity"
         tools:layout_editor_absoluteX="6dp"
         tools:layout_editor_absoluteY="478dp" />
 
