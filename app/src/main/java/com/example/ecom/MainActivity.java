@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonClick1(View view){
-        Intent intent = new Intent(this, Activity1.class);
+        Intent intent = new Intent(this, BlogListActivity.class);
         startActivity(intent);
     }
 
