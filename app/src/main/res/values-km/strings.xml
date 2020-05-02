@@ -1,17 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Blog</string>
-    <string name="blog_welcome">Welcome To Ethipul</string>
-    <string name="blog">Blog</string>
-    <string name="guest_click">Click TO BLOG LIST AS GUEST</string>
+    <string name="blog">ប្លុក</string>
+    <string name="blog_welcome">សូមស្វាគមន៍មកកាន់ Ethipul</string>
+    <string name="guest_click">ចូលទៅកាន់តារាងblogជាជនមិនស្គាល់មុខ</string>
     <string name="blog_list_title">Blog List Title 1</string>
-    <string name="next_list_btn">Next List</string>
-    <string name="prev_list_btn">Prev List</string>
-    <string name="list_welcome">Welcome To Ethipul</string>
+    <string name="next_list_btn">តារាងបន្ទាប់</string>
+    <string name="prev_list_btn">តារាងមុន</string>
+    <string name="list_welcome">ស្វាគមន៍មកកាន់Ethipul</string>
     <string name="detail_title">Blog Title 1</string>
     <string name="detail_description">Blog Description 1. New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.</string>
-    <string name="click_to_another">Click To Another</string>
-    <string name="e">Next</string>
-    <string name="f">Next</string>
-    <string name="g">Next</string>
+    <string name="click_to_another">ទៅកាន់ទំព័រផ្សេងៗ</string>
 
 </resources>

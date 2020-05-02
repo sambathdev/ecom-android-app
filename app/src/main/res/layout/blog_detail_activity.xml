@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signinbg"
+    android:background="@color/colorPrimary"
     >
 
     <LinearLayout
@@ -19,13 +19,13 @@
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"
-            android:text="Blog Title 1"
+            android:text="@string/detail_title"
             ></TextView>
         <TextView
             android:id="@+id/descrip"
             android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:text="Blog Description 1. New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square."
+            android:text="@string/detail_description"
             ></TextView>
     </LinearLayout>
 
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onButtonClick3"
-            android:text="Click TO Activity Other" />
+            android:text="@string/click_to_another" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,18 +49,30 @@
         android:layout_weight="2"
         android:orientation="horizontal"
         >
-
-        <Button
-            android:id="@+id/next"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Next" />
-        <Button
-            android:id="@+id/prev"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Prev"
-            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/prev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Prev"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Next" />
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>
