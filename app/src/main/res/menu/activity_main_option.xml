@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/mnu_opt_menu"
+        app:showAsAction="always"
+        android:title="@string/optmenu" />
+
+    <item android:id="@+id/mnu_notifications"
+        android:title="@string/notification_opt" />
+
+    <item android:id="@+id/mnu_about_us"
+        android:title="@string/aboutus_opt" />
+
+    <item android:id="@+id/mnu_version"
+        android:title="@string/version_opt" />
+
+</menu>

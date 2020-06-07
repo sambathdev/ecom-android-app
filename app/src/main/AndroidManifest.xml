@@ -19,6 +19,10 @@
         <activity android:name=".BlogListActivity"></activity>
         <activity android:name=".BlogDetailActivity"></activity>
         <activity android:name=".Activity3"></activity>
+        <activity android:name=".EmailsActivity"></activity>
+
+
+
     </application>
 
 </manifest>

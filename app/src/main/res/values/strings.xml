@@ -10,8 +10,13 @@
     <string name="detail_title">Blog Title 1</string>
     <string name="detail_description">Blog Description 1. New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.</string>
     <string name="click_to_another">Click To Another</string>
-    <string name="e">Next</string>
-    <string name="f">Next</string>
-    <string name="g">Next</string>
+    <string name="blog_signin">Sign In</string>
+    <string name="aboutus_opt">About Us</string>
+    <string name="version_opt">Version</string>
+    <string name="notification_opt">Notification</string>
+    <string name="optmenu">Option Menu</string>
+    <string name="v2">Next</string>
+    <string name="v3">Next</string>
+    <string name="v4">Next</string>
 
 </resources>

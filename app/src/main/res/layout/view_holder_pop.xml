@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="135dp"
+    android:padding="8dp"
+    android:layout_height="match_parent">
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:background="@drawable/radius_blog"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/signinbg"/>
+        <RelativeLayout
+            android:paddingHorizontal="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_above="@id/txt_blog_bodypop"
+                android:textColor="@color/white"
+                android:id="@+id/txt_titlepop"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title of blog, i want you to be loger than this."/>
+            <TextView
+                android:layout_above="@id/author_row"
+                android:textColor="@color/white"
+                android:id="@+id/txt_blog_bodypop"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title of blog, i want you to be loger than this."/>
+            <LinearLayout
+                android:id="@+id/author_row"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/radius_blog"
+                    android:src="@drawable/signinbg"/>
+                <TextView
+                    android:id="@+id/txt_authorpop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Author name"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</LinearLayout>
+

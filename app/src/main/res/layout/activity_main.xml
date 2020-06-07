@@ -1,69 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    >
-    
-    <LinearLayout
+    android:background="@drawable/sigin_bg">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarhome"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:id="@+id/welcome"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:gravity="center"
-            android:text="@string/blog_welcome"
-            ></TextView>
-        <TextView
-            android:id="@+id/blog"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="@string/blog"
-            ></TextView>
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        app:title="Sambath">
 
-    </LinearLayout>
-
-    <LinearLayout
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btnSignIn"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign In" />
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blog_signin"
+                    android:textSize="70dp"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="50dp"
+                    android:textColor="@color/black">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="50dp"
+                    android:text="@string/blog_welcome">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="50dp"
+                    android:text="Log In to go to next activity">
+                </TextView>
 
-        <Button
-            android:id="@+id/btnSignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sign Up" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent">
+                <Button
+                    android:id="@+id/loginbtn"
+                    android:onClick="seeTestLayout"
+                    android:layout_centerInParent="true"
+                    android:layout_above="@id/signupbtn"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/radius_btn"
+                    android:paddingHorizontal="60dp"
+                    android:paddingVertical="10dp"
+                    android:text="Log In"
+                    android:textSize="20dp" />
+                <Button
+                    android:id="@+id/signupbtn"
+                    android:layout_width="200dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radius_btn"
+                    android:paddingHorizontal="60dp"
+                    android:paddingVertical="10dp"
+                    android:text="Sign Up"
+                    android:textSize="20dp" />
 
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        >
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onButtonClick1"
-            android:text="@string/guest_click" />
-    </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>
