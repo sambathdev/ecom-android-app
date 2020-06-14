@@ -3,8 +3,17 @@ package com.example.ecom.popularAdapter;
 public class Popular {
     private String title;
     private String body;
-    private String Author;
+    private String author;
+    private String blogUrl;
     private long time;
+
+    public String getBlogUrl() {
+        return blogUrl;
+    }
+
+    public void setBlogUrl(String blogUrl) {
+        this.blogUrl = blogUrl;
+    }
 
     public String getTitle() {
         return title;
@@ -23,11 +32,11 @@ public class Popular {
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        this.author = author;
     }
 
     public long getTime() {

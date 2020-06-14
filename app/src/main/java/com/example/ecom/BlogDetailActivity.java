@@ -13,8 +13,5 @@ public class BlogDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.blog_detail_activity);
     }
-    public void onButtonClick3(View view){
-        Intent intent = new Intent(this, Activity3.class);
-        startActivity(intent);
-    }
+
 }

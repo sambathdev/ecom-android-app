@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         return true;
     }
+    //gugu
 
     public void seeTestLayout(View view){
         Intent intent = new Intent(this, BlogListActivity.class);

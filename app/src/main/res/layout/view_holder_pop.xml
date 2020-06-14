@@ -9,12 +9,13 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pop_img"
             android:background="@drawable/radius_blog"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/signinbg"/>
+            />
         <RelativeLayout
             android:paddingHorizontal="10dp"
             android:paddingBottom="10dp"

@@ -5,11 +5,12 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="100dp">
-    <ImageView
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img_blog"
         android:layout_width="100dp"
         android:scaleType="centerCrop"
         android:layout_height="match_parent"
-        android:src="@drawable/signinbg"/>
+        />
     <RelativeLayout
         android:orientation="vertical"
         android:layout_width="match_parent"

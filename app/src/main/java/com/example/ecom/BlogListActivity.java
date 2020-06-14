@@ -4,97 +4,96 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.ecom.blogAdapter.Blog;
 import com.example.ecom.blogAdapter.BlogsAdapter;
 import com.example.ecom.emailAdapter.Email;
 import com.example.ecom.emailAdapter.EmailsAdapter;
 import com.example.ecom.popularAdapter.PopsAdapter;
 import com.example.ecom.popularAdapter.Popular;
+import com.google.gson.Gson;
 
 public class BlogListActivity extends AppCompatActivity {
+    RecyclerView recyclerView;
+    RecyclerView recyclerViewPop;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.blog_list_activity);
 
-        RecyclerView recyclerView = findViewById(R.id.recycler_view_blog);
+        recyclerView = findViewById(R.id.recycler_view_blog);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
-        Blog[] blogs = loadBlogs();
+        loadBlogs();
 
-        BlogsAdapter adapter = new BlogsAdapter(blogs);
 
-        recyclerView.setAdapter(adapter);
 
         // ---------------
-        RecyclerView recyclerViewPop = findViewById(R.id.recycler_view_pop);
-
+        recyclerViewPop = findViewById(R.id.recycler_view_pop);
         RecyclerView.LayoutManager layoutManagerPop = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         recyclerViewPop.setLayoutManager(layoutManagerPop);
 
-        Popular[] pops = loadPops();
-        // create and set an adapter
-        PopsAdapter adapterPop = new PopsAdapter(pops);
-
-        recyclerViewPop.setAdapter(adapterPop);
-
+        loadPops();
 
     }
 
-    private Blog[] loadBlogs(){
-        // temp data
-        Blog blog1 = new Blog();
-        blog1.setTitle("Blog 1 title");
-        blog1.setBody("i write blog today");
-        blog1.setAuthor("Sambath");
+    private void loadBlogs(){
+        String url = "http://www.json-generator.com/api/json/get/calvUBPigi?indent=2";
+        StringRequest request = new StringRequest(
+            url,
+            new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    Gson gson = new Gson();
+                    Blog[] blogs = gson.fromJson(response, Blog[].class);
 
-        Blog blog2 = new Blog();
-        blog2.setTitle("Blog 2 title");
-        blog2.setBody("i write blog yesterday");
-        blog2.setAuthor("Samnang");
-
-        Blog blog3 = new Blog();
-        blog3.setTitle("Blog 3 title");
-        blog3.setBody("i write blog lastyear");
-        blog3.setAuthor("lina");
-
-        Blog blog4 = new Blog();
-        blog4.setTitle("Blog 4 title");
-        blog4.setBody("i write blog this year");
-        blog4.setAuthor("yaro");
-
-        Blog[] blogs = new Blog[]{blog1, blog2, blog3, blog4};
-
-        return blogs;
+                    BlogsAdapter adapter = new BlogsAdapter(blogs);
+                    recyclerView.setAdapter(adapter);
+                }
+            },
+            new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(BlogListActivity.this, "Error", Toast.LENGTH_LONG).show();
+                }
+            }
+        );
+        Volley.newRequestQueue(this).add(request);
     }
-    private Popular[] loadPops(){
-        // temp data
-        Popular pop1 = new Popular();
-        pop1.setTitle("Blog 1 title");
-        pop1.setBody("i write blog today");
-        pop1.setAuthor("Sambath");
+    private void loadPops(){
+       String url = "http://www.json-generator.com/api/json/get/caCJLLqgrS?indent=2";
+       StringRequest request = new StringRequest(
+           url,
+           new Response.Listener<String>() {
+               @Override
+               public void onResponse(String response) {
+                   Gson gson = new Gson();
+                   Popular[] pops = gson.fromJson(response, Popular[].class);
 
-        Popular pop2 = new Popular();
-        pop2.setTitle("Blog 2 title");
-        pop2.setBody("i write blog yesterday");
-        pop2.setAuthor("hana");
-
-        Popular pop3 = new Popular();
-        pop3.setTitle("Blog 3 title");
-        pop3.setBody("i write blog last year");
-        pop3.setAuthor("hono");
-
-        Popular[] pops = new Popular[]{pop1, pop2, pop3};
-
-        return pops;
+                   PopsAdapter adapterPop = new PopsAdapter(pops);
+                   recyclerViewPop.setAdapter(adapterPop);
+               }
+           },
+           new Response.ErrorListener() {
+               @Override
+               public void onErrorResponse(VolleyError error) {
+                   Toast.makeText(BlogListActivity.this, "Error", Toast.LENGTH_LONG).show();
+               }
+           }
+       );
+       Volley.newRequestQueue(this).add(request);
     }
 
     public void onButtonClick2(View view){

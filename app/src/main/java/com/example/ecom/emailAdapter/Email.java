@@ -2,9 +2,18 @@ package com.example.ecom.emailAdapter;
 
 public class Email {
     private String sender;
+    private String senderProfile;
     private String subject;
     private String body;
     private long time;
+
+    public String getSenderProfile() {
+        return senderProfile;
+    }
+
+    public void setSenderProfile(String senderProfile) {
+        this.senderProfile = senderProfile;
+    }
 
     public String getSender() {
         return sender;
