@@ -44,7 +44,7 @@ public class BlogViewHolder extends RecyclerView.ViewHolder {
             public void onClick(View v)
             {
                 txtTitle.setText("hohoho");
-                // do action when clicked...
+                // do action when clicked.....
             }
         });
     }
