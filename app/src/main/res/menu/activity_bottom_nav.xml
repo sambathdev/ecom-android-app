@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mnu_blogs_fragment"
+        android:icon="@drawable/ic_action_profile"
+        android:title="Blogs" />
+
+    <item
+        android:id="@+id/mnu_categories_fragment"
+        android:icon="@drawable/ic_action_profile"
+        android:title="categories" />
+
+    <item
+        android:id="@+id/mnu_profile_fragment"
+        android:icon="@drawable/ic_action_profile"
+        android:title="profile" />
+
+    <item
+        android:id="@+id/mnu_settings_fragment"
+        android:icon="@drawable/ic_action_profile"
+        android:title="settings" />
+
+</menu>

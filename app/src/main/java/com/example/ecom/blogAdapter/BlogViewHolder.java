@@ -1,6 +1,7 @@
 package com.example.ecom.blogAdapter;
 
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,13 +16,17 @@ public class BlogViewHolder extends RecyclerView.ViewHolder {
     private TextView txtBody;
     private TextView txtAuthor;
     private SimpleDraweeView imgBlog;
-
+    private LinearLayout blogrow;
     public BlogViewHolder(@NonNull View itemView) {
         super(itemView);
         txtTitle = itemView.findViewById(R.id.txt_title);
         txtBody = itemView.findViewById(R.id.txt_blog_body);
         txtAuthor = itemView.findViewById(R.id.txt_author);
         imgBlog = itemView.findViewById(R.id.img_blog);
+        blogrow = itemView.findViewById(R.id.blogrow);
+    }
+    private void gg(){
+
     }
     public void bind(Blog blog){
         String shortBlog = "";
@@ -34,5 +39,15 @@ public class BlogViewHolder extends RecyclerView.ViewHolder {
         txtBody.setText(shortBlog);
         txtAuthor.setText(blog.getAuthor());
         imgBlog.setImageURI(blog.getBlogUrl());
+        blogrow.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)
+            {
+                txtTitle.setText("hohoho");
+                // do action when clicked...
+            }
+        });
     }
+
+
 }

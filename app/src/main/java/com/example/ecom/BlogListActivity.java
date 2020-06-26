@@ -37,9 +37,6 @@ public class BlogListActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         loadBlogs();
-
-
-
         // ---------------
         recyclerViewPop = findViewById(R.id.recycler_view_pop);
         RecyclerView.LayoutManager layoutManagerPop = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);

@@ -21,6 +21,7 @@
         <activity android:name=".BlogListActivity"></activity>
         <activity android:name=".BlogDetailActivity"></activity>
         <activity android:name=".EmailsActivity"></activity>
+        <activity android:name=".BottomNavActivity"></activity>
 
 
 

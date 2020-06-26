@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     //gugu
 
     public void seeTestLayout(View view){
-        Intent intent = new Intent(this, BlogListActivity.class);
+        Intent intent = new Intent(this, BottomNavActivity.class);
         startActivity(intent);
     }
 
