@@ -65,7 +65,7 @@ public class BottomNavActivity extends AppCompatActivity implements BottomNaviga
             getSupportActionBar().setTitle("Blogs");
 
         } else if (item.getItemId() == R.id.mnu_categories_fragment) {
-            showFragment(new CategoryFragment());
+            showFragment(new CategoryFragment(name, blogs));
             getSupportActionBar().setTitle("Category");
         }
         else if (item.getItemId() == R.id.mnu_profile_fragment) {

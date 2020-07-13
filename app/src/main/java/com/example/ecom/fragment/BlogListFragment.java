@@ -31,8 +31,7 @@ public class BlogListFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View fragmentView = inflater.inflate(R.layout.fragment_blog_list, container, false);
         TextView textView = fragmentView.findViewById(R.id.gogo);
-        textView.setText("love you");
-
+        textView.setText("All Blogs");
 
         RecyclerView recyclerView = fragmentView.findViewById(R.id.recycler_view_blog_fragment);
 
